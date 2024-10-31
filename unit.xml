@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.3200" tests="13" failures="13">
+  <testsuite name="Root Suite" timestamp="2023-03-20T20:31:05" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="rateLimiterOptions" timestamp="2023-03-20T20:31:05" tests="6" file="/Users/ishpreetsingh/workspace/hackerrank/1494391-nodejs-rate-limiter/test/index.spec.js" time="0.0010" failures="6">
+    <testcase name="rateLimiterOptions should have maxRequests property" time="0.0010" classname="should have maxRequests property">
+      <failure message="expected {} to have property &apos;maxRequests&apos;" type="AssertionError"><![CDATA[AssertionError: expected {} to have property 'maxRequests'
+    at Context.<anonymous> (test/index.spec.js:39:36)
+    at processImmediate (internal/timers.js:464:21)]]></failure>
+    </testcase>
+    <testcase name="rateLimiterOptions should have timeWindow property" time="0.0000" classname="should have timeWindow property">
+      <failure message="expected {} to have property &apos;timeWindow&apos;" type="AssertionError"><![CDATA[AssertionError: expected {} to have property 'timeWindow'
+    at Context.<anonymous> (test/index.spec.js:43:36)
+    at processImmediate (internal/timers.js:464:21)]]></failure>
+    </testcase>
+    <testcase name="rateLimiterOptions maxRequests should be a number" time="0.0000" classname="maxRequests should be a number">
+      <failure message="Cannot read property &apos;should&apos; of undefined" type="TypeError"><![CDATA[TypeError: Cannot read property 'should' of undefined
+    at Context.<anonymous> (test/index.spec.js:47:36)
+    at processImmediate (internal/timers.js:464:21)]]></failure>
+    </testcase>
+    <testcase name="rateLimiterOptions timeWindow should be a number" time="0.0000" classname="timeWindow should be a number">
+      <failure message="Cannot read property &apos;should&apos; of undefined" type="TypeError"><![CDATA[TypeError: Cannot read property 'should' of undefined
+    at Context.<anonymous> (test/index.spec.js:51:35)
+    at processImmediate (internal/timers.js:464:21)]]></failure>
+    </testcase>
+    <testcase name="rateLimiterOptions maxRequests should be equal to 5" time="0.0000" classname="maxRequests should be equal to 5">
+      <failure message="Cannot read property &apos;should&apos; of undefined" type="TypeError"><![CDATA[TypeError: Cannot read property 'should' of undefined
+    at Context.<anonymous> (test/index.spec.js:55:36)
+    at processImmediate (internal/timers.js:464:21)]]></failure>
+    </testcase>
+    <testcase name="rateLimiterOptions timeWindow should be equal to 1000" time="0.0000" classname="timeWindow should be equal to 1000">
+      <failure message="Cannot read property &apos;should&apos; of undefined" type="TypeError"><![CDATA[TypeError: Cannot read property 'should' of undefined
+    at Context.<anonymous> (test/index.spec.js:59:35)
+    at processImmediate (internal/timers.js:464:21)]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="rateLimiterMiddleware" timestamp="2023-03-20T20:31:05" tests="7" file="/Users/ishpreetsingh/workspace/hackerrank/1494391-nodejs-rate-limiter/test/index.spec.js" time="0.3190" failures="7">
+    <testcase name="rateLimiterMiddleware should have x-ratelimit-limit header" time="0.0270" classname="should have x-ratelimit-limit header">
+      <failure message="expected { Object (x-powered-by, content-type, ...) } to have property &apos;x-ratelimit-limit&apos;" type="AssertionError"><![CDATA[AssertionError: expected { Object (x-powered-by, content-type, ...) } to have property 'x-ratelimit-limit'
+    at Context.<anonymous> (test/index.spec.js:72:33)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)]]></failure>
+    </testcase>
+    <testcase name="rateLimiterMiddleware should have x-ratelimit-remaining header" time="0.0030" classname="should have x-ratelimit-remaining header">
+      <failure message="expected { Object (x-powered-by, content-type, ...) } to have property &apos;x-ratelimit-remaining&apos;" type="AssertionError"><![CDATA[AssertionError: expected { Object (x-powered-by, content-type, ...) } to have property 'x-ratelimit-remaining'
+    at Context.<anonymous> (test/index.spec.js:78:33)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)]]></failure>
+    </testcase>
+    <testcase name="rateLimiterMiddleware should have x-ratelimit-reset header" time="0.0030" classname="should have x-ratelimit-reset header">
+      <failure message="expected { Object (x-powered-by, content-type, ...) } to have property &apos;x-ratelimit-reset&apos;" type="AssertionError"><![CDATA[AssertionError: expected { Object (x-powered-by, content-type, ...) } to have property 'x-ratelimit-reset'
+    at Context.<anonymous> (test/index.spec.js:84:33)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)]]></failure>
+    </testcase>
+    <testcase name="rateLimiterMiddleware should allow all requests when totalRequests is within the rate limit" time="0.0480" classname="should allow all requests when totalRequests is within the rate limit">
+      <failure message="Middleware is being bypassed" type="Error"><![CDATA[Error: Middleware is being bypassed
+    at /Users/ishpreetsingh/workspace/hackerrank/1494391-nodejs-rate-limiter/test/index.spec.js:93:15
+    at Array.forEach (<anonymous>)
+    at Context.<anonymous> (test/index.spec.js:91:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)]]></failure>
+    </testcase>
+    <testcase name="rateLimiterMiddleware should allow the exact number of requests as the rate limit" time="0.1020" classname="should allow the exact number of requests as the rate limit">
+      <failure message="Middleware is being bypassed" type="Error"><![CDATA[Error: Middleware is being bypassed
+    at /Users/ishpreetsingh/workspace/hackerrank/1494391-nodejs-rate-limiter/test/index.spec.js:104:15
+    at Array.forEach (<anonymous>)
+    at Context.<anonymous> (test/index.spec.js:102:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)]]></failure>
+    </testcase>
+    <testcase name="rateLimiterMiddleware should block only the requests exceeding the rate limit" time="0.0640" classname="should block only the requests exceeding the rate limit">
+      <failure message="Middleware is being bypassed" type="Error"><![CDATA[Error: Middleware is being bypassed
+    at /Users/ishpreetsingh/workspace/hackerrank/1494391-nodejs-rate-limiter/test/index.spec.js:118:15
+    at Array.forEach (<anonymous>)
+    at Context.<anonymous> (test/index.spec.js:116:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)]]></failure>
+    </testcase>
+    <testcase name="rateLimiterMiddleware should allow requests after the rate limit reset time has passed" time="0.0720" classname="should allow requests after the rate limit reset time has passed">
+      <failure message="Middleware is being bypassed" type="Error"><![CDATA[Error: Middleware is being bypassed
+    at Context.<anonymous> (test/index.spec.js:143:13)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
